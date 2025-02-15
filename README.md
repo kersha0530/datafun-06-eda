@@ -20,12 +20,28 @@ This project focuses on Exploratory Data Analysis (EDA) using **Python, Pandas, 
 - Summarize findings with meaningful insights
 
 ---
+## Setup Instructions
+### **1️. Create & Activate a Virtual Environment
+Run the following commands in your project directory:
 
+#### On Windows (PowerShell)
+```powershell
+
+python -m venv venv
+venv\Scripts\activate
+```
+
+#### On macOS/Linux
+```bash
+
+python3 -m venv venv
+source venv/bin/activate
+```
 ##  Getting Started
 ### **1️. Install Required Libraries**
 Ensure you have the required libraries installed. Run the following in your terminal:
 ```bash
-pip install pandas seaborn matplotlib
+pip install pandas seaborn matplotlib jupyter
 ```
 
 ### **2️. Open Jupyter Notebook**
@@ -72,8 +88,16 @@ df.rename(columns={"pulse": "heart_rate"}, inplace=True)
 - **Create a new activity level column:**
 ```python
 df["activity_level"] = df["time_numeric"].apply(lambda x: "Short" if x == 1 else ("Moderate" if x == 15 else "Long"))
-```
 
+```
+### **Run the Notebook** 
+* Each section contains Markdown explanations and Python code for:
+
+Data loading & cleaning
+Descriptive statistics
+Data visualization
+Key insights & conclusions
+To execute, run each cell in order.
 ---
 
 ## 📊 **Visualizations & Insights**
@@ -104,6 +128,34 @@ plt.ylabel("Heart Rate")
 plt.legend(title="Exercise Type")
 plt.show()
 ```
+
+###  Version Control (Git & GitHub Commands)
+**1️.  Initialize Git & Connect to GitHub** 
+```bash
+
+git init
+git remote add origin https://github.com/kersha0530/exercise-eda.git
+```
+**2️. Add & Commit Changes**
+```bash
+
+git add .
+git commit -m "Added EDA notebook, README, and visualizations"
+```
+**3️. Push Changes to GitHub**
+```bash
+
+git push origin main
+```
+
+🔗 Verify Your Work on GitHub
+1️⃣ Push your changes using the Git commands above
+2️⃣ Take a screenshot of your updated repository on GitHub
+3️⃣ Provide a clickable link to your GitHub project:
+🔗 https://github.com/kersha0530/datafun-06-eda 
+
+
+
 
 ---
 
